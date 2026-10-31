@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" fill="none">
+  <defs>
+    <linearGradient id="bodyGrad" x1="380" y1="200" x2="820" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D9488" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0284C7" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="strokeGrad" x1="380" y1="200" x2="820" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <radialGradient id="nucleoid" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4F46E5" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#0D9488" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <!-- 显微镜视野圆 -->
+  <circle cx="600" cy="262" r="232" fill="url(#dots)" stroke="#0D9488" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="3 7"/>
+  <circle cx="600" cy="262" r="176" stroke="#0D9488" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- 鞭毛（周身） -->
+  <g stroke="url(#strokeGrad)" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.75">
+    <path d="M428 232 C 356 214, 326 168, 276 158 C 244 152, 228 124, 196 128"/>
+    <path d="M420 288 C 348 304, 318 344, 266 356 C 232 364, 214 392, 182 386"/>
+    <path d="M772 232 C 844 214, 874 168, 924 158 C 956 152, 972 124, 1004 128"/>
+    <path d="M780 288 C 852 304, 882 344, 934 356 C 968 364, 986 392, 1018 386"/>
+    <path d="M560 206 C 552 160, 572 120, 600 88 C 620 66, 612 46, 640 34"/>
+    <path d="M640 318 C 648 364, 628 404, 600 436 C 580 458, 588 478, 560 490"/>
+  </g>
+
+  <!-- 菌毛（短刺） -->
+  <g stroke="#0D9488" stroke-width="1.6" stroke-linecap="round" opacity="0.45">
+    <path d="M448 214 L424 198"/><path d="M486 204 L468 184"/>
+    <path d="M530 198 L520 174"/><path d="M576 196 L576 170"/>
+    <path d="M624 196 L624 170"/><path d="M670 198 L680 174"/>
+    <path d="M714 204 L732 184"/><path d="M752 214 L776 198"/>
+    <path d="M448 310 L424 326"/><path d="M486 320 L468 340"/>
+    <path d="M530 326 L520 350"/><path d="M576 328 L576 354"/>
+    <path d="M624 328 L624 354"/><path d="M670 326 L680 350"/>
+    <path d="M714 320 L732 340"/><path d="M752 310 L776 326"/>
+  </g>
+
+  <!-- 杆菌主体（圆角胶囊） -->
+  <rect x="402" y="196" width="396" height="132" rx="66" fill="url(#bodyGrad)" stroke="url(#strokeGrad)" stroke-width="3"/>
+  <!-- 内膜线 -->
+  <rect x="416" y="210" width="368" height="104" rx="52" stroke="#0D9488" stroke-opacity="0.25" stroke-width="1.2" stroke-dasharray="4 6"/>
+
+  <!-- 拟核 -->
+  <ellipse cx="600" cy="262" rx="92" ry="40" fill="url(#nucleoid)"/>
+  <path d="M530 258 C 552 240, 576 278, 600 258 C 624 238, 648 278, 670 258" stroke="#4F46E5" stroke-opacity="0.55" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M540 274 C 564 258, 586 290, 610 272 C 634 254, 652 284, 664 272" stroke="#4F46E5" stroke-opacity="0.35" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+  <!-- 核糖体/质粒颗粒 -->
+  <g fill="#0D9488" fill-opacity="0.5">
+    <circle cx="470" cy="240" r="3.4"/><circle cx="494" cy="286" r="2.6"/>
+    <circle cx="706" cy="240" r="3.4"/><circle cx="730" cy="284" r="2.6"/>
+    <circle cx="452" cy="268" r="2.4"/><circle cx="748" cy="258" r="2.4"/>
+  </g>
+  <g stroke="#D97706" stroke-opacity="0.6" stroke-width="1.6" fill="none">
+    <circle cx="462" cy="298" r="7"/>
+    <circle cx="724" cy="226" r="6"/>
+  </g>
+
+  <!-- 标注引线 -->
+  <g opacity="0.6">
+    <path d="M600 196 L600 128" stroke="#0D9488" stroke-width="1.2" stroke-dasharray="3 4"/>
+    <path d="M402 262 L300 262" stroke="#0D9488" stroke-width="1.2" stroke-dasharray="3 4"/>
+    <path d="M798 262 L900 262" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="3 4"/>
+  </g>
+</svg>
