@@ -4,10 +4,8 @@ COZE_WORKSPACE_PATH="${COZE_WORKSPACE_PATH:-$(pwd)}"
 cd "${COZE_WORKSPACE_PATH}"
 echo "Installing dependencies..."
 bash "$COZE_WORKSPACE_PATH/scripts/prepare-node-modules.sh" --prefer-frozen-lockfile --prefer-offline --loglevel debug --reporter=append-only
-# 【新增】强制预先安装 typescript，解决时序问题
-pnpm add -D typescript
 echo "Building the Next.js project..."
-pnpm next build --webpack
+pnpm next build --webpack --config next.config.js
 echo "Bundling server with tsup..."
 pnpm tsup src/server.ts --format cjs --platform node --target node20 --outDir dist --no-splitting --no-minify
 echo "Build completed successfully!"
